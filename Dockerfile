@@ -1,4 +1,4 @@
-FROM sonatype/nexus:2.14.5
+FROM sonatype/nexus:2.13.0-01
 
 MAINTAINER Robert Northard, <robert.a.northard>
 
