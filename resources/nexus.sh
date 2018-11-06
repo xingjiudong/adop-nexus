@@ -90,11 +90,11 @@ if [ "${LDAP_ENABLED}" = true ]
     [[ -n "${NEXUS_CUSTOM_DEV_ROLE}" ]] && insert_role ${NEXUS_CUSTOM_DEV_ROLE} developer
   fi
   
-  echo "$(date) - Disabling default XMLauth..."
+  #echo "$(date) - Disabling default XMLauth..."
   # Delete default authentication realms (XMLauth..) from Nexus if LDAP auth is enabled
   # If you get locked out of nexus, restart nexus with LDAP_ENABLED=false.
   #   - To allow user role mapping need to allow xml authorization
-  sed -i "/XmlAuthenticatingRealm/d"  ${NEXUS_HOME}/conf/security-configuration.xml
+  #sed -i "/XmlAuthenticatingRealm/d"  ${NEXUS_HOME}/conf/security-configuration.xml
   
   # Define the correct LDAP user and group mapping configurations
   LDAP_TYPE=${LDAP_TYPE:-openldap}
