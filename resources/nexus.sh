@@ -116,6 +116,8 @@ if [ "${LDAP_ENABLED}" = true ]
         <userObjectClass>${LDAP_USER_OBJECT_CLASS:-inetOrgPerson}</userObjectClass>
         <userBaseDn>${LDAP_USER_BASE_DN}</userBaseDn>
         <userRealNameAttribute>${LDAP_USER_REAL_NAME_ATTRIBUTE:-cn}</userRealNameAttribute>
+        <userSubtree>${LDAP_USER_SUBTREE:-false}</userSubtree>
+        <groupSubtree>${LDAP_GROUP_SUBTREE:-false}</groupSubtree>
       </userAndGroupConfig>"
   ;;
 
