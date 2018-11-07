@@ -61,6 +61,13 @@ if [ ! -z "${NEXUS_CENTRAL_REPO_URL}" ]
         sed -i "s#https://repo1.maven.org/maven2/#${NEXUS_CENTRAL_REPO_URL}#" ${NEXUS_HOME}/conf/nexus.xml
 fi
 
+if [ -n "${ADMIN_EMAIL}" ]
+       then
+       # change admin email
+       sed -i "s/changeme@yourcompany.com/${ADMIN_EMAIL}/g" ${NEXUS_HOME}/conf/security.xml
+       echo "$(date) - ADMIN_EMAIL: ${ADMIN_EMAIL}"
+fi
+
 insert_role () {
 	ROLE=$1
 	ROLE_TYPE=$2

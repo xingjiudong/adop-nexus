@@ -8,7 +8,7 @@
       <lastName>User</lastName>
       <password>$shiro1$SHA-512$1024$V1h8/V49Dc/EqFkI7QDWwA==$9YjJHTfemyADpl9x4tBkBiF/23zoXXerOUL33HpGlUgZx/IKkZAb/nb11uyLA+EC6kXFNKS1NLlVLZ8Vh3tVGw==</password>
       <status>active</status>
-      <email>${ADMIN_EMAIL}</email>
+      <email>changeme@yourcompany.com</email>
     </user>
   </users>
   <roles>
