@@ -68,6 +68,8 @@ The image reads the following LDAP environment variables for ADOP OpenLDAP or LD
   * userObjectClass - `${LDAP_USER_OBJECT_CLASS:-inetOrgPerson}`
   * userBaseDn - `${LDAP_USER_BASE_DN}`
   * userRealNameAttribute - `${LDAP_USER_REAL_NAME_ATTRIBUTE:-cn}`
+  * userSubtree - `${LDAP_USER_SUBTREE:-false}`
+  * groupSubtree - `${LDAP_GROUP_SUBTREE:-false}`
 
 Additionally, the image reads the following LDAP environment variables if you want to use a Windows Active Directory or LDAP_TYPE is 'active_directory':
 
