@@ -25,7 +25,8 @@ ENV LDAP_ENABLED=true \
     LDAP_GROUP_MEMBER_FORMAT=dn \
     LDAP_USER_SUBTREE=false \
     LDAP_GROUP_SUBTREE=false \
-    NEXUS_CREATE_CUSTOM_ROLES=false
+    NEXUS_CREATE_CUSTOM_ROLES=false \
+    ADMIN_EMAIL=changeme@yourcompany.com
 
 USER root
 
