@@ -101,6 +101,7 @@ Additionally, the image reads the following LDAP environment variables if you wa
  * `USER_AGENT`, if set, you can enable Basic Authentication. [How do I enable WWW-Authenticate headers for content 401 responses](https://support.sonatype.com/hc/en-us/articles/213465078-How-do-I-enable-WWW-Authenticate-headers-for-content-401-responses)
  * `ADMIN_EMAIL`,if set, you can change admin email.
  * `ANONYMOUS_EMAIL`,if set, you can change Anonymous email. 
+ * `TASK_FILE`,if set,you can add task.
  
 # License
 Please view [licence information](LICENCE.md) for the software contained on this image.
