@@ -336,6 +336,7 @@
       </patterns>
     </repositoryTarget>
   </repositoryTargets>
+  <!--insert-task-->
   <smtpConfiguration>
     <hostname>smtp-host</hostname>
     <port>25</port>

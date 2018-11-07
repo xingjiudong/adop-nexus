@@ -32,7 +32,7 @@ if [ -n "${USER_AGENT}" ]
        then
        echo "nexus.browserdetector.excludedUserAgents=${USER_AGENT}" >> /opt/sonatype/nexus/conf/nexus.properties
 fi
- 
+
 if [ -n "${NEXUS_BASE_URL}" ]
        then
        # Add base url - requests timeout if incorrect
@@ -59,6 +59,14 @@ if [ ! -z "${NEXUS_CENTRAL_REPO_URL}" ]
         then
         echo "$(date) - Central Repository URL: ${NEXUS_CENTRAL_REPO_URL}"
         sed -i "s#https://repo1.maven.org/maven2/#${NEXUS_CENTRAL_REPO_URL}#" ${NEXUS_HOME}/conf/nexus.xml
+fi
+
+# add tasks
+if [[ -s ${TASK_FILE} ]]
+       then
+       # add task
+       sed -i "/<!--insert-task-->/r ${TASK_FILE}" ${NEXUS_HOME}/conf/nexus.xml
+       echo "$(date) - add Tasks"
 fi
 
 # Change users Email
