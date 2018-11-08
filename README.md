@@ -83,6 +83,14 @@ Additionally, the image reads the following LDAP environment variables if you wa
 
 > [Sonatype/Nexus/plugin/LDAP/Documentation](https://books.sonatype.com/nexus-book/reference/ldap.html)
 
+## System Smtp configuration variables
+
+ * `SMTP_HOST`, if set, you can Change System SMTP Setting
+ * `SMTP_PORT`
+ * `SMTP_USERNAME`
+ * `SMTP_PASSWORD`
+ * `SYSTEM_EMAIL`
+
 ## Other configuration variables
 
  * `CONTEXT_PATH`, passed as -Dnexus-webapp-context-path. This is used to define the URL which Nexus is accessed.
