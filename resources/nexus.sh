@@ -73,10 +73,10 @@ fi
 if [ -n "${SMTP_HOST}" ]
        then
        sed -i "s/<hostname>smtp-host<\/hostname>/<hostname>${SMTP_HOST}<\/hostname>/g" ${NEXUS_HOME}/conf/nexus.xml
-       sed -i "s/<port>25<\/port>/<port>${SMTP_PORT:-25}<\/port>/g" ${NEXUS_HOME}/conf/nexus.xml
-       sed -i "s/<username>smtp-username<\/username>/<username>${SMTP_USERNAME:-smtp-username}<\/username>/g" ${NEXUS_HOME}/conf/nexus.xml
-       sed -i "s/<password>{dbGYQfqecdAHZ5P+VwFXN4cuyM0oaid5+hiYFwTj8b4=}<\/password>/<password>${SMTP_PASSWORD:-{dbGYQfqecdAHZ5P+VwFXN4cuyM0oaid5+hiYFwTj8b4=}}<\/password>/g" ${NEXUS_HOME}/conf/nexus.xml
-       sed -i "s/<systemEmailAddress>system@nexus.org<\/systemEmailAddress>/<systemEmailAddress>${SYSTEM_EMAIL:-system@nexus.org}<\/systemEmailAddress>/g" ${NEXUS_HOME}/conf/nexus.xml
+       sed -i "s/<port>25<\/port>/<port>${SMTP_PORT}<\/port>/g" ${NEXUS_HOME}/conf/nexus.xml
+       sed -i "s/<username>smtp-username<\/username>/<username>${SMTP_USERNAME}<\/username>/g" ${NEXUS_HOME}/conf/nexus.xml
+       sed -i "s/<password>{dbGYQfqecdAHZ5P+VwFXN4cuyM0oaid5+hiYFwTj8b4=}<\/password>/<password>${SMTP_PASSWORD}<\/password>/g" ${NEXUS_HOME}/conf/nexus.xml
+       sed -i "s/<systemEmailAddress>system@nexus.org<\/systemEmailAddress>/<systemEmailAddress>${SYSTEM_EMAIL}<\/systemEmailAddress>/g" ${NEXUS_HOME}/conf/nexus.xml
        echo "$(date) - Change SMTP Setting: ${SMTP_HOST}:${SMTP_PORT:-25}"
 fi
 
