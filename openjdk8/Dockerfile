@@ -6,8 +6,7 @@ USER root
 
 
 ENV JAVA_VERSION=1.8.0 \
-    OPENJDK_VERSION=1.8.0.191.b12-0.el7_5
-
+    OPENJDK_VERSION=1.8.0.181-3.b13.el7_5
 
 RUN  set -x && mv /opt/jdk* /tmp/ && rm -rf /opt/java && \
      yum install -y \
